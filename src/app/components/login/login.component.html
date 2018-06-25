@@ -1,0 +1,27 @@
+<div class="modal-dialog text-center">
+  <div class="col-sm-9 main-section">
+    <div class="modal-content">
+      <div class="col-12 user-img">
+        <!-- <img src="../../../assets/images/user-img.jpg"> -->
+        <h3>LOGO</h3>
+      </div>
+      <div class="col-12 form-input">
+        <form [formGroup]="loginForm" (ngSubmit)="onLogin(loginForm.value)">
+          <div class="form-group">
+            <input type="email" class="form-control" formControlName="email" placeholder="Enter Email">
+            <div *ngIf="loginForm.controls.email.hasError('pattern')">
+              Use A Valid Email
+            </div>
+          </div>
+          <div class="form-group">
+            <input type="password" class="form-control" formControlName="password" placeholder="Enter Password">
+            <div *ngIf="loginForm.controls.password.hasError('minLength')">
+              Password Too Short
+            </div>
+          </div>
+          <button type="submit" class="btn btn-success">Sign In</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

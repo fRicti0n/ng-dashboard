@@ -1,0 +1,14 @@
+.main-section {
+    margin: 0 auto;
+    margin-top: 130px;
+    padding: 0;
+}
+
+.modal-content {
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+}
+
+.btn {
+    border-radius: 25px;
+}

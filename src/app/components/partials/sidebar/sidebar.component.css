@@ -1,0 +1,36 @@
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgba(26, 52, 65, 0.7);
+    overflow-x: hidden;
+    transition: 0.5s;
+    /* padding-top: 60px; */
+}
+
+.sidenav-header {
+    height: 104px;
+    background: url('../../../../assets/images/sidenav-bg.png') center transparent;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 8px;
+    text-decoration: none;
+    text-align: justify;
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffffff;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    /* background: #416d5f; */
+    color: #416d5f;
+}
+
+
+/*  */
