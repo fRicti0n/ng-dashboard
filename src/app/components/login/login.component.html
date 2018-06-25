@@ -19,7 +19,7 @@
               Password Too Short
             </div>
           </div>
-          <button type="submit" class="btn btn-success">Sign In</button>
+          <button type="submit" [disabled]="loginForm.invalid" class="btn btn-success">Sign In</button>
         </form>
       </div>
     </div>
