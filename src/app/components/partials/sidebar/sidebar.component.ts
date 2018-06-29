@@ -7,6 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SidebarComponent implements OnInit {
 
+  private routerList = [
+    { path: 'home', display: 'Home', icon: 'fa fa-home'},
+    { path: 'profile', display: 'Profile', icon: 'fa fa-user'},
+    { path: 'my-docs', display: 'My Documents', icon: 'fa fa-file'},
+    { path: 'upload', display: 'Upload', icon: 'fa fa-upload'}
+  ]
+
   constructor() { }
 
   ngOnInit() {
