@@ -1,0 +1,8 @@
+.card {
+    background: transparent;
+    border: 1px solid rgb(26, 52, 65);
+    box-shadow: 15px 15px 10px #0e1f32;
+}
+.card .card-header {
+    background: rgba(26, 52, 65, 0.7);
+}

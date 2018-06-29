@@ -1,0 +1,45 @@
+<div class="container">
+  <div class="row">
+      <div class="col-sm-6 col-md-6 offset-md-3">
+          <div class="account-wall">
+              <img class="profile-img" src="https://lh5.googleusercontent.com/-b0-k99FZlyE/AAAAAAAAAAI/AAAAAAAAAAA/eu7opA4byxI/photo.jpg?sz=120"
+                  alt="">
+              <form [formGroup]="registerForm" (ngSubmit)="signUp(registerForm.value)" class="form-signin">
+                  <div class="form-group">
+                      <div class="input-group">
+                          <div class="input-group-prepend">
+                              <span class="input-group-text">
+                                  <i class="fa fa-at fa-2x"></i>
+                              </span>
+                          </div>
+                          <input type="email" class="form-control" formControlName="email" placeholder="Email" required autofocus>
+                      </div>
+                  </div>
+                  <div class="form-group">
+                      <div class="input-group">
+                          <div class="input-group-prepend">
+                              <span class="input-group-text">
+                                  <i class="fa fa-key fa-2x"></i>
+                              </span>
+                          </div>
+                          <input type="password" class="form-control" formControlName="password" placeholder="Password" required autofocus>
+                      </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">
+                                <i class="fa fa-key fa-2x"></i>
+                            </span>
+                        </div>
+                        <input type="password" class="form-control" formControlName="confirmpassword" placeholder="Confirm Password" required autofocus>
+                    </div>
+                </div>
+                  <button class="btn btn-lg btn-primary btn-block" type="submit">Sign Up</button>
+                  <a href="#" class="pull-right need-help">Need help? </a>
+                  <span class="clearfix"></span>
+              </form>
+          </div>
+      </div>
+  </div>
+</div>

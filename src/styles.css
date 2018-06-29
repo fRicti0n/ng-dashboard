@@ -4,3 +4,7 @@ body {
   background: url('./assets/images/body.jpg') no-repeat center center fixed;
   color: #ffffff !important;
 }
+
+.container {
+  padding-top: 10px;
+}

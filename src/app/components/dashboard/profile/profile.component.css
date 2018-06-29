@@ -1,0 +1,20 @@
+.card {
+    background: transparent;
+    border: 1px solid rgb(26, 52, 65);
+    box-shadow: 15px 15px 10px #0e1f32;
+}
+.card .card-header {
+    background: rgba(26, 52, 65, 0.7);
+}
+
+.card .card-img-top {
+    height: 20rem;
+}
+
+.img-thumbnail {
+    background-color: #fff;
+    max-width: 100%;
+    height: auto;
+    border-radius: 0;
+    margin-top: 20px;
+}

@@ -1,11 +1,8 @@
 <header>
   <nav>
-    <div class="menu-icon">
-      <span style="font-size:30px;cursor:pointer" (click)="toggleNav()"><i class="fa fa-bars"></i></span>
-    </div>
     <div class="logo">
-      <span style="font-size:30px;cursor:pointer" (click)="toggleNav()"><i class="fa fa-bars"></i></span>
-      LOGO
+      <span (click)="toggleNav()"><i class="fa fa-bars"></i></span>
+      <a [routerLink]="['home']">LOGO</a>
     </div>
     <div class="menu">
       <ul>
