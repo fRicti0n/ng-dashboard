@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ChartsModule } from 'ng4-charts/ng4-charts';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -23,6 +24,7 @@ import { RegisterComponent } from './components/register/register.component';
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
+    ChartsModule,
     AppRoutingModule
   ],
   providers: [],

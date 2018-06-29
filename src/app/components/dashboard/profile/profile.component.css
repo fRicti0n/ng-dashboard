@@ -1,6 +1,6 @@
 .card {
-    background: transparent;
-    border: 1px solid rgb(26, 52, 65);
+    background: rgba(10, 27, 47, 0.7);
+    border: 2px solid rgb(26, 52, 65);
     box-shadow: 15px 15px 10px #0e1f32;
 }
 .card .card-header {

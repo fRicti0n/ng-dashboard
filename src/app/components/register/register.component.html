@@ -35,7 +35,7 @@
                         <input type="password" class="form-control" formControlName="confirmpassword" placeholder="Confirm Password" required autofocus>
                     </div>
                 </div>
-                  <button class="btn btn-lg btn-primary btn-block" type="submit">Sign Up</button>
+                  <button [disabled]="registerForm.invalid" class="btn btn-lg btn-primary btn-block" type="submit">Sign Up</button>
                   <a href="#" class="pull-right need-help">Need help? </a>
                   <span class="clearfix"></span>
               </form>

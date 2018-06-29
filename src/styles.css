@@ -3,6 +3,8 @@
 body {
   background: url('./assets/images/body.jpg') no-repeat center center fixed;
   color: #ffffff !important;
+  margin: 0;
+  padding: 0;
 }
 
 .container {

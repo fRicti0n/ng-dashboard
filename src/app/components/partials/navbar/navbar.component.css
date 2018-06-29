@@ -1,4 +1,6 @@
 header {
+    position: relative;
+    margin-top: -10px;
     width: 100%;
     background: rgba(10, 27, 47, 0.7);
     background-size: cover;
@@ -21,6 +23,7 @@ header {
 
 nav {
     position: relative;
+    z-index: 1; 
     width: 100%;
 }
 

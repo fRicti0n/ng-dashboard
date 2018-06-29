@@ -25,7 +25,7 @@
                             <input type="password" class="form-control" formControlName="password" placeholder="Password" required autofocus>
                         </div>
                     </div>
-                    <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+                    <button [disabled]="loginForm.invalid" class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
                     <label class="checkbox pull-left">
                         <input type="checkbox" value="remember-me"> Remember me
                     </label>

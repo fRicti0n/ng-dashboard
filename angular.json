@@ -28,7 +28,8 @@
             "scripts": [
               "src/assets/jquery/jquery.min.js",
               "src/assets/popper.js/dist/umd/popper.min.js",
-              "src/assets/bootstrap/js/bootstrap.min.js"
+              "src/assets/bootstrap/js/bootstrap.min.js",
+              "node_modules/chart.js/dist/Chart.min.js"
             ]
           },
           "configurations": {

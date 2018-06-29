@@ -1,8 +1,25 @@
 .card {
     background: transparent;
-    border: 1px solid rgb(26, 52, 65);
+    border: 2px solid rgb(26, 52, 65);
     box-shadow: 15px 15px 10px #0e1f32;
+    border-radius: 10px;
 }
 .card .card-header {
-    background: rgba(26, 52, 65, 0.7);
+    background: rgba(10, 27, 47, 0.7);
+}
+
+.doughnut-chart {
+    margin-top: 20px;
+    background: rgba(10, 27, 47, 0.7);
+    border: 2px solid rgb(26, 52, 65);
+    border-radius: 10px;
+}
+
+.line-chart {
+    width: 100%;
+    margin: 15px;
+    padding: 15px;
+    background: rgba(10, 27, 47, 0.7);
+    border: 2px solid rgb(26, 52, 65);
+    border-radius: 10px;
 }
