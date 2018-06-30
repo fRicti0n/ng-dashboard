@@ -20,7 +20,7 @@ export class LoginComponent implements OnInit {
     });
   }
 
-  singIn(form: FormGroup) {
+  signIn(form: FormGroup) {
     console.log(form);
     this.router.navigate(['/dashboard']);
   }
