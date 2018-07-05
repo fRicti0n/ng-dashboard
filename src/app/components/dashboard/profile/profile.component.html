@@ -13,8 +13,27 @@
       </div>
     </div>
     <div class="col-md-8">
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel ullam praesentium laudantium asperiores expedita pariatur
-        quia impedit, quis necessitatibus, facilis temporibus iusto fuga dolores facere qui odio aliquid. Autem, repellendus.</p>
+      <div class="table-responsive">
+        <pagination-controls  id="listing_pagination" maxSize="5" directionLinks="true" (pageChange)="page = $event"></pagination-controls>
+        <table class="table table-bordered table-hover">
+          <thead>
+            <th>#</th>
+            <th>Post Id</th>
+            <th>Post Name</th>
+            <th>Email</th>
+            <th>Post Content</th>
+          </thead>
+          <tbody>
+            <tr *ngFor="let comment of comments | paginate: {id: 'listing_pagination', itemsPerPage: 10, currentPage: page, totalItems: totalComments}; let i = index">
+              <td>{{i+1}}</td>
+              <td>{{comment.postId}}</td>
+              <td>{{comment.name}}</td>
+              <td>{{comment.email}}</td>
+              <td>{{comment.body}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
 </div>

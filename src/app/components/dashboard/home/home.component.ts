@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../../../services/data.service';
+import { Chart } from 'chart.js';
 
 @Component({
   selector: 'app-home',
@@ -49,9 +51,43 @@ export class HomeComponent implements OnInit {
   public lineChartLegend: boolean = true;
   public lineChartType: string = 'line';
 
-  constructor() { }
+  public dChart = [];
+  public dChartData: Array<any>;
+  public dChartLabels: Array<string>;
+
+  constructor(private dataService: DataService) {
+    this.dChartData = new Array<any>();
+    this.dChartLabels = new Array<string>();
+  }
 
   ngOnInit() {
+    this.dataService.getTodos().subscribe((response) => {
+      let data = response.json();
+      let remaining = data.filter((d) => {
+        if (!d.completed) {
+          return d;
+        }
+      });
+      this.dChartData.push(remaining.length)
+      this.dChartLabels.push("Remaining Todos")
+      let completed = data.filter((d) => {
+        if (d.completed) {
+          return d;
+        }
+      });
+      this.dChartData.push(completed.length);
+      this.dChartLabels.push("Completed Todos")
+      this.dChart = new Chart('todo', {
+        type: 'doughnut',
+        data: {
+          datasets: [{
+            data: this.dChartData,
+            backgroundColor: ['#aa4b66', '#2671a6']
+          }],
+          labels: this.dChartLabels
+        }
+      })
+    })
   }
 
 }

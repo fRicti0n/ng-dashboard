@@ -23,8 +23,10 @@
     "bootstrap": "^4.1.1",
     "chart.js": "^2.7.2",
     "core-js": "^2.5.4",
+    "datatables": "^1.10.18",
     "jquery": "^3.3.1",
     "ng4-charts": "^1.0.2",
+    "ngx-pagination": "^3.1.1",
     "popper.js": "^1.14.3",
     "rxjs": "^6.0.0",
     "zone.js": "^0.8.26"
