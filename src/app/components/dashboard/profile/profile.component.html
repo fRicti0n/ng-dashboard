@@ -1,39 +1,38 @@
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-md-4">
-      <div class="card">
-        <div class="card-img-top text-center">
-          <img class="img-thumbnail" src="https://lh5.googleusercontent.com/-b0-k99FZlyE/AAAAAAAAAAI/AAAAAAAAAAA/eu7opA4byxI/photo.jpg?sz=240" alt="">
-        </div>
-        <div class="card-body">
-          <h4 class="card-title">Supratik Roy</h4>
-          <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores accusantium mollitia nobis, repellat rerum
-            corporis animi. Sint odio voluptatem non dolor unde nisi animi, magnam officia eligendi assumenda atque minus!</p>
-        </div>
+<div class="row">
+  <div class="col-md-4">
+    <div class="card">
+      <div class="card-img-top text-center">
+        <img class="img-thumbnail" src="https://lh5.googleusercontent.com/-b0-k99FZlyE/AAAAAAAAAAI/AAAAAAAAAAA/eu7opA4byxI/photo.jpg?sz=240"
+          alt="">
+      </div>
+      <div class="card-body">
+        <h4 class="card-title">Supratik Roy</h4>
+        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores accusantium mollitia nobis, repellat rerum corporis
+          animi. Sint odio voluptatem non dolor unde nisi animi, magnam officia eligendi assumenda atque minus!</p>
       </div>
     </div>
-    <div class="col-md-8">
-      <div class="table-responsive">
-        <pagination-controls  id="listing_pagination" maxSize="5" directionLinks="true" (pageChange)="page = $event"></pagination-controls>
-        <table class="table table-bordered table-hover">
-          <thead>
-            <th>#</th>
-            <th>Post Id</th>
-            <th>Post Name</th>
-            <th>Email</th>
-            <th>Post Content</th>
-          </thead>
-          <tbody>
-            <tr *ngFor="let comment of comments | paginate: {id: 'listing_pagination', itemsPerPage: 10, currentPage: page, totalItems: totalComments}; let i = index">
-              <td>{{i+1}}</td>
-              <td>{{comment.postId}}</td>
-              <td>{{comment.name}}</td>
-              <td>{{comment.email}}</td>
-              <td>{{comment.body}}</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+  </div>
+  <div class="col-md-8">
+    <div class="table-responsive">
+      <pagination-controls id="listing_pagination" maxSize="5" directionLinks="true" (pageChange)="page = $event"></pagination-controls>
+      <table class="table table-bordered table-hover">
+        <thead>
+          <th>#</th>
+          <th>Post Id</th>
+          <th>Post Name</th>
+          <th>Email</th>
+          <th>Post Content</th>
+        </thead>
+        <tbody>
+          <tr *ngFor="let comment of comments | paginate: {id: 'listing_pagination', itemsPerPage: 10, currentPage: page, totalItems: totalComments}; let i = index">
+            <td>{{i+1}}</td>
+            <td>{{comment.postId}}</td>
+            <td>{{comment.name}}</td>
+            <td>{{comment.email}}</td>
+            <td>{{comment.body}}</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </div>
 </div>

@@ -86,7 +86,7 @@ export class HomeComponent implements OnInit {
         data: {
           datasets: [{
             data: this.dChartData,
-            backgroundColor: ['#aa4b66', '#2671a6']
+            backgroundColor: [this.getRandomHexcode(), this.getRandomHexcode()]
           }],
           labels: this.dChartLabels
         }
@@ -99,12 +99,17 @@ export class HomeComponent implements OnInit {
   }
 
   getRandomRgba() {
-    var num = Math.round(0xffffff * Math.random());
-    var r = num >> 16;
-    var g = num >> 8 & 255;
-    var b = num & 255;
-    var a = Math.random().toFixed(1);
+    const num = Math.round(0xffffff * Math.random());
+    const r = num >> 16;
+    const g = num >> 8 & 255;
+    const b = num & 255;
+    const a = Math.random().toFixed(1);
     return 'rgba(' + r + ', ' + g + ', ' + b + ',' + 0.7 + ')';
-}
+  }
+
+  getRandomHexcode() {
+    const hex = Math.random() * 0xFFFFFF << 0;
+    return '#' + hex.toString(16);
+  }
 
 }

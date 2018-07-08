@@ -1,48 +1,46 @@
-<div class="container-fluid">
-  <div class="row">
-    <div class="col">
-      <div class="card">
-        <div class="card-header">
-          <h4>Card Header</h4>
-        </div>
-        <div class="card-body">
-          <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo quas voluptate neque cum commodi soluta sequi officia
-            totam accusantium temporibus nesciunt dolorum nihil voluptatem quod, maiores beatae facilis eius dolores.</p>
-        </div>
+<div class="row">
+  <div class="col">
+    <div class="card">
+      <div class="card-header">
+        <h4>Card Header</h4>
       </div>
-    </div>
-    <div class="col">
-      <div class="card">
-        <div class="card-header">
-          <h4>Card Header</h4>
-        </div>
-        <div class="card-body">
-          <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo quas voluptate neque cum commodi soluta sequi officia
-            totam accusantium temporibus nesciunt dolorum nihil voluptatem quod, maiores beatae facilis eius dolores.</p>
-        </div>
+      <div class="card-body">
+        <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo quas voluptate neque cum commodi soluta sequi officia
+          totam accusantium temporibus nesciunt dolorum nihil voluptatem quod, maiores beatae facilis eius dolores.</p>
       </div>
     </div>
   </div>
-  <div class="row">
-    <!-- put some graphs here -->
-    <div class="col-md-6">
-      <div class="doughnut-chart">
-        <canvas id="todo">{{chart}}</canvas>
-        <!-- <canvas id="todo" baseChart [data]="doughnutChartData" [labels]="doughnutChartLabels" [chartType]="doughnutChartType"></canvas> -->
+  <div class="col">
+    <div class="card">
+      <div class="card-header">
+        <h4>Card Header</h4>
       </div>
-    </div>
-    <div class="col-md-6">
-      <div class="doughnut-chart">
-        <canvas baseChart [data]="doughnutChartData" [labels]="doughnutChartLabels" [chartType]="doughnutChartType"></canvas>
+      <div class="card-body">
+        <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo quas voluptate neque cum commodi soluta sequi officia
+          totam accusantium temporibus nesciunt dolorum nihil voluptatem quod, maiores beatae facilis eius dolores.</p>
       </div>
     </div>
   </div>
-  <div class="row">
-    <div class="col-md-6">
-      <div class="line-chart">
-        <canvas baseChart [datasets]="lineChartData" [labels]="lineChartLabels" [options]="lineChartOptions" [colors]="lineChartColors"
-          [legend]="lineChartLegend" [chartType]="lineChartType"></canvas>
-      </div>
+</div>
+<div class="row">
+  <!-- put some graphs here -->
+  <div class="col-md-6">
+    <div class="doughnut-chart">
+      <canvas id="todo">{{chart}}</canvas>
+      <!-- <canvas id="todo" baseChart [data]="doughnutChartData" [labels]="doughnutChartLabels" [chartType]="doughnutChartType"></canvas> -->
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="doughnut-chart">
+      <canvas baseChart [data]="doughnutChartData" [labels]="doughnutChartLabels" [chartType]="doughnutChartType"></canvas>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-6">
+    <div class="line-chart">
+      <canvas baseChart [datasets]="lineChartData" [labels]="lineChartLabels" [options]="lineChartOptions" [colors]="lineChartColors"
+        [legend]="lineChartLegend" [chartType]="lineChartType"></canvas>
     </div>
   </div>
 </div>

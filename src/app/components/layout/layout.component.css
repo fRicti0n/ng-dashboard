@@ -2,7 +2,6 @@
 
 #main {
     transition: margin-left .5s;
-    padding-top: 10px;
 }
 
 @media screen and (max-height: 450px) {
