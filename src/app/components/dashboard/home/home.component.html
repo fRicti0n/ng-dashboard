@@ -38,9 +38,11 @@
     </div>
   </div>
   <div class="row">
-    <div class="line-chart">
-      <canvas baseChart [datasets]="lineChartData" [labels]="lineChartLabels" [options]="lineChartOptions" [colors]="lineChartColors"
-        [legend]="lineChartLegend" [chartType]="lineChartType"></canvas>
+    <div class="col-md-6">
+      <div class="line-chart">
+        <canvas baseChart [datasets]="lineChartData" [labels]="lineChartLabels" [options]="lineChartOptions" [colors]="lineChartColors"
+          [legend]="lineChartLegend" [chartType]="lineChartType"></canvas>
+      </div>
     </div>
   </div>
 </div>

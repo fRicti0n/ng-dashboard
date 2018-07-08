@@ -23,29 +23,29 @@ export class HomeComponent implements OnInit {
     responsive: true
   };
   public lineChartColors: Array<any> = [
-    { // grey
-      backgroundColor: 'rgba(148,159,177,0.2)',
-      borderColor: 'rgba(148,159,177,1)',
-      pointBackgroundColor: 'rgba(148,159,177,1)',
+    { // random color
+      backgroundColor: this.getRandomRgba(),
+      borderColor: this.getRandomRgba(),
+      pointBackgroundColor: this.getRandomRgba(),
       pointBorderColor: '#fff',
       pointHoverBackgroundColor: '#fff',
-      pointHoverBorderColor: 'rgba(148,159,177,0.8)'
+      pointHoverBorderColor: this.getRandomRgba()
     },
-    { // dark grey
-      backgroundColor: 'rgba(77,83,96,0.2)',
-      borderColor: 'rgba(77,83,96,1)',
-      pointBackgroundColor: 'rgba(77,83,96,1)',
+    { // random color
+      backgroundColor: this.getRandomRgba(),
+      borderColor: this.getRandomRgba(),
+      pointBackgroundColor: this.getRandomRgba(),
       pointBorderColor: '#fff',
       pointHoverBackgroundColor: '#fff',
-      pointHoverBorderColor: 'rgba(77,83,96,1)'
+      pointHoverBorderColor: this.getRandomRgba()
     },
-    { // grey
-      backgroundColor: 'rgba(148,159,177,0.2)',
-      borderColor: 'rgba(148,159,177,1)',
-      pointBackgroundColor: 'rgba(148,159,177,1)',
+    { // random color
+      backgroundColor: this.getRandomRgba(),
+      borderColor: this.getRandomRgba(),
+      pointBackgroundColor: this.getRandomRgba(),
       pointBorderColor: '#fff',
       pointHoverBackgroundColor: '#fff',
-      pointHoverBorderColor: 'rgba(148,159,177,0.8)'
+      pointHoverBorderColor: this.getRandomRgba()
     }
   ];
   public lineChartLegend: boolean = true;
@@ -61,6 +61,10 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.doughnutChart();
+  }
+
+  doughnutChart() {
     this.dataService.getTodos().subscribe((response) => {
       let data = response.json();
       let remaining = data.filter((d) => {
@@ -89,5 +93,18 @@ export class HomeComponent implements OnInit {
       })
     })
   }
+
+  lineChart() {
+
+  }
+
+  getRandomRgba() {
+    var num = Math.round(0xffffff * Math.random());
+    var r = num >> 16;
+    var g = num >> 8 & 255;
+    var b = num & 255;
+    var a = Math.random().toFixed(1);
+    return 'rgba(' + r + ', ' + g + ', ' + b + ',' + 0.7 + ')';
+}
 
 }
