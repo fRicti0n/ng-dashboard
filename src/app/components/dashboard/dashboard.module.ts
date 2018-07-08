@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ReactiveFormsModule } from '@angular/forms';
 import { ChartsModule } from 'ng4-charts/ng4-charts';
 import { NgxPaginationModule } from 'ngx-pagination';
 
@@ -12,6 +13,7 @@ import { UploadComponent } from './upload/upload.component';
 @NgModule({
   imports: [
     CommonModule,
+    ReactiveFormsModule,
     ChartsModule,
     NgxPaginationModule,
     DashboardRoutingModule

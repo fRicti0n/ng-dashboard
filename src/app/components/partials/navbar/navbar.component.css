@@ -9,3 +9,8 @@
 .bg-dark {
     background: rgba(10, 27, 47, 0.7) !important;
 }
+
+.input-group-text {
+    color: #ffffff;
+    background-color: transparent;
+}

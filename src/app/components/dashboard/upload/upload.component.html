@@ -1,2 +1,10 @@
-<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere fugiat omnis fugit cupiditate quos earum sapiente expedita
-  odit eveniet dolor sint porro illum distinctio dolorem, ut rem odio tempore cum!</p>
+<div class="row">
+  <div class="col-md-6">
+    <form [formGroup]="uploadForm" (ngSubmit)="onUpload()">
+      <div class="form-group">
+        <input type="file" name="" id="document" (change)="fileChangeEvent($event)" #fileInput>
+      </div>
+      <button type="submit" class="btn btn-outline-success">Upload</button>
+    </form>
+  </div>
+</div>
