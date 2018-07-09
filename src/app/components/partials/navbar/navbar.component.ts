@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
@@ -10,6 +10,20 @@ export class NavbarComponent implements OnInit {
   open = false;
 
   constructor() { }
+
+  @HostListener('window:scroll', [])
+  checkScroll() {
+    var navbar = document.getElementById("navbar");
+    var sticky = navbar.offsetTop;
+
+    if (window.pageYOffset > sticky) {
+      console.log('added css')
+      navbar.classList.add("fixed-top")
+    } else {
+      console.log('removed css')
+      navbar.classList.remove("fixed-top");
+    }
+  }
 
   ngOnInit() {
   }

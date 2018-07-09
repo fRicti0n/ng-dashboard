@@ -55,6 +55,13 @@ export class HomeComponent implements OnInit {
   public dChartData: Array<any>;
   public dChartLabels: Array<string>;
 
+  // google maps zoom level
+  zoom: number = 8;
+
+  // initial center position for the map
+  lat: number = 51.673858;
+  lng: number = 7.815982;
+
   constructor(private dataService: DataService) {
     this.dChartData = new Array<any>();
     this.dChartLabels = new Array<string>();

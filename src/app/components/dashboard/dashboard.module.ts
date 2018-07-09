@@ -9,6 +9,7 @@ import { HomeComponent } from './home/home.component';
 import { ProfileComponent } from './profile/profile.component';
 import { MyDocumentsComponent } from './my-documents/my-documents.component';
 import { UploadComponent } from './upload/upload.component';
+import { AgmCoreModule } from '@agm/core';
 
 @NgModule({
   imports: [
@@ -16,6 +17,9 @@ import { UploadComponent } from './upload/upload.component';
     ReactiveFormsModule,
     ChartsModule,
     NgxPaginationModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyAvcDy5ZYc2ujCS6TTtI3RYX5QmuoV8Ffw'
+    }),
     DashboardRoutingModule
   ],
   declarations: [HomeComponent, ProfileComponent, MyDocumentsComponent, UploadComponent]
