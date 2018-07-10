@@ -55,6 +55,10 @@ export class HomeComponent implements OnInit {
   public dChartData: Array<any>;
   public dChartLabels: Array<string>;
 
+  public lChart = [];
+  public lChartLabels: Array<string>;
+  public lChartData: Array<any>;
+
   // google maps zoom level
   zoom: number = 8;
 
@@ -69,6 +73,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.doughnutChart();
+    // this.lineChart();
   }
 
   doughnutChart() {
@@ -102,7 +107,7 @@ export class HomeComponent implements OnInit {
   }
 
   lineChart() {
-
+    
   }
 
   getRandomRgba() {

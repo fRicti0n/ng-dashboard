@@ -33,8 +33,8 @@ export class RegisterComponent implements OnInit {
     };
     // const payload = form;
     this._authService.signup(payload).subscribe((response) => {
-      const res = response.json();
-      this._authService.setUser(res.token);
+      const data = response.json();
+      this._authService.setUser(data.token);
       Swal('Success!', 'Registration Complete', 'success');
       this._router.navigate(['/login']);
     });

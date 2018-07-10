@@ -14,9 +14,8 @@ export class NavbarComponent implements OnInit {
   @HostListener('window:scroll', [])
   checkScroll() {
     const navbar = document.getElementById('navbar');
-    const sticky = navbar.offsetTop;
-
-    if (window.pageYOffset > 200) {
+    const sticky = navbar.offsetHeight;
+    if (window.pageYOffset > sticky) {
       navbar.classList.add('fixed-top');
       navbar.classList.remove('bg-dark');
     } else {

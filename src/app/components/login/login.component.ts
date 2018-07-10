@@ -29,8 +29,8 @@ export class LoginComponent implements OnInit {
     };
 
     this._authService.signin(payload).subscribe((response) => {
-      const res = response.json();
-      this._authService.setUser(res.token);
+      const data = response.json();
+      this._authService.setUser(data.token);
       Swal('Success', 'Logged In', 'success');
       this.router.navigate(['/dashboard']);
     });
