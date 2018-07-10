@@ -13,15 +13,15 @@ export class NavbarComponent implements OnInit {
 
   @HostListener('window:scroll', [])
   checkScroll() {
-    var navbar = document.getElementById("navbar");
-    var sticky = navbar.offsetTop;
+    const navbar = document.getElementById('navbar');
+    const sticky = navbar.offsetTop;
 
-    if (window.pageYOffset > sticky) {
-      console.log('added css')
-      navbar.classList.add("fixed-top")
+    if (window.pageYOffset > 200) {
+      navbar.classList.add('fixed-top');
+      navbar.classList.remove('bg-dark');
     } else {
-      console.log('removed css')
-      navbar.classList.remove("fixed-top");
+      navbar.classList.remove('fixed-top');
+      navbar.classList.add('bg-dark');
     }
   }
 

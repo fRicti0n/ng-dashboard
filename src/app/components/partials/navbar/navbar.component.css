@@ -28,3 +28,7 @@
     border: 1px solid #59fad6;
     border-radius: .30rem;
 }
+
+.fixed-top {
+    background: rgb(13, 30, 49);
+}
