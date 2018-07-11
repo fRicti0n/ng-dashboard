@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../../../services/data.service';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-profile',
@@ -8,12 +9,18 @@ import { DataService } from '../../../services/data.service';
 })
 export class ProfileComponent implements OnInit {
 
-  private username: 'Supratik Roy';
+  public username: 'Supratik Roy';
   public comments: Array<any>;
   public totalComments: number;
-  public page: number = 1;
+  public page = 1;
+  public videos = [
+    {
+      name: 'CS:GO BEST ODDSHOTS #291',
+      embed: 'https://www.youtube.com/embed/lZO4alK9t7U'
+    }
+  ];
 
-  constructor(private dataService: DataService) {
+  constructor(private dataService: DataService, private sanitizer: DomSanitizer) {
     this.comments = new Array<any>();
   }
 
@@ -27,7 +34,15 @@ export class ProfileComponent implements OnInit {
       this.totalComments = this.comments.length;
     }, (error) => {
       console.error(error);
-    })
+    });
+  }
+
+  getEmbedUrl() {
+    return this.sanitizer.bypassSecurityTrustResourceUrl(this.videos[0].embed);
+  }
+
+  getUsername() {
+    return this.username;
   }
 
 }

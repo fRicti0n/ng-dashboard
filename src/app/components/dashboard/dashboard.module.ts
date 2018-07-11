@@ -18,7 +18,7 @@ import { AgmCoreModule } from '@agm/core';
     ChartsModule,
     NgxPaginationModule,
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyAvcDy5ZYc2ujCS6TTtI3RYX5QmuoV8Ffw'
+      apiKey: 'AIzaSyCXnr3za3qheAtkZzJreU8WtK5cy961gRg'
     }),
     DashboardRoutingModule
   ],

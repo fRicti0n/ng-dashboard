@@ -6,7 +6,7 @@
           alt="">
       </div>
       <div class="card-body">
-        <h4 class="card-title">Supratik Roy</h4>
+        <h4 class="card-title" [innerHTML]="getUsername()"></h4>
         <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores accusantium mollitia nobis, repellat rerum corporis
           animi. Sint odio voluptatem non dolor unde nisi animi, magnam officia eligendi assumenda atque minus!</p>
       </div>
@@ -24,7 +24,7 @@
           <th>Post Content</th>
         </thead>
         <tbody>
-          <tr *ngFor="let comment of comments | paginate: {id: 'listing_pagination', itemsPerPage: 10, currentPage: page, totalItems: totalComments}; let i = index">
+          <tr *ngFor="let comment of comments | paginate: {id: 'listing_pagination', itemsPerPage: 5, currentPage: page, totalItems: totalComments}; let i = index">
             <td>{{i+1}}</td>
             <td>{{comment.postId}}</td>
             <td>{{comment.name}}</td>
@@ -34,5 +34,10 @@
         </tbody>
       </table>
     </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-6">
+    <iframe width="560" height="315" [src]="getEmbedUrl()" frameborder="1" allow="autoplay; encrypted-media" allowfullscreen></iframe>
   </div>
 </div>
