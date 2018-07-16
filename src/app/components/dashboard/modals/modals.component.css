@@ -1,0 +1,18 @@
+p {
+    margin: 1rem;
+}
+.modal-dialog {
+    max-width: 800px;
+    overflow-y: initial !important
+}
+
+.modal-title {
+    color: black;
+}
+
+.modal-body {
+    color: black;
+    font-size: 12px;
+    height: 250px;
+    overflow-y: auto;
+}

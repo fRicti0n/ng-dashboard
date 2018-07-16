@@ -28,7 +28,7 @@
 }
 
 .bg-dark {
-    background: rgb(255, 255, 255, 0.1) !important;
+    background: rgba(255, 255, 255, 0.1) !important;
 }
 
 .input-group-text {
@@ -48,4 +48,16 @@
 
 .fixed-top {
     background: rgba(6, 80, 64, 0.9);
+}
+
+.dropdown-menu {
+    background: rgba(6, 80, 64, 0.9);
+}
+
+.dropdown-item {
+    color: #ffffff;
+}
+
+.dropdown-item:hover {
+    color: #000000;
 }

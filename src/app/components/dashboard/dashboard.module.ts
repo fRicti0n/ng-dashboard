@@ -9,7 +9,9 @@ import { HomeComponent } from './home/home.component';
 import { ProfileComponent } from './profile/profile.component';
 import { MyDocumentsComponent } from './my-documents/my-documents.component';
 import { UploadComponent } from './upload/upload.component';
+import { ModalsComponent } from './modals/modals.component';
 import { AgmCoreModule } from '@agm/core';
+import { MapComponent } from './map/map.component';
 
 @NgModule({
   imports: [
@@ -22,6 +24,6 @@ import { AgmCoreModule } from '@agm/core';
     }),
     DashboardRoutingModule
   ],
-  declarations: [HomeComponent, ProfileComponent, MyDocumentsComponent, UploadComponent]
+  declarations: [HomeComponent, ProfileComponent, MyDocumentsComponent, UploadComponent, ModalsComponent, MapComponent]
 })
 export class DashboardModule { }
