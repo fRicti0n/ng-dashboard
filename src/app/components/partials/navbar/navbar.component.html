@@ -1,60 +1,29 @@
-<!-- <nav id="navbar" class="navbar navbar-expand-sm bg-dark">
-  <a class="navbar-brand" (click)="toggleNav()">
-    <i class="fa fa-bars"></i>
-  </a>
-  <a [routerLink]="['profile']" class="navbar-brand">
-    <img src="https://lh5.googleusercontent.com/-b0-k99FZlyE/AAAAAAAAAAI/AAAAAAAAAAA/eu7opA4byxI/photo.jpg?sz=25" alt="Profile">
-  </a>
-  <form class="form-inline my-2 my-lg-0">
-    <div class="input-group">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <div class="input-group-append">
-        <span class="input-group-text search">
-          <i class="fa fa-search"></i>
-        </span>
-      </div>
-    </div>
-  </form>
-  <ul class="navbar-nav ml-auto">
-    <li class="nav-item">
-      <a class="nav-link">
-        <i class="fa fa-bell"></i>
-      </a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link">
-        <i class="fa fa-envelope"></i>
-      </a>
-    </li>
-  </ul>
-</nav> -->
-
 <nav id="navbar" class="navbar navbar-expand-sm bg-dark navbar-dark">
     <a [routerLink]="['home']" class="navbar-brand">
-      <img src="assets/images/user-img.jpg" width="20" alt="Home">
+      <img class="rounded-circle" src="assets/images/user-img.jpg" width="25" alt="Home">
     </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="collapsibleNavbar">
     <ul class="navbar-nav ml-auto">
-      <li class="nav-item">
+      <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
         <a class="nav-link" [routerLink]="['profile']">
-          <img src="https://lh5.googleusercontent.com/-b0-k99FZlyE/AAAAAAAAAAI/AAAAAAAAAAA/eu7opA4byxI/photo.jpg?sz=25" alt="Profile">
+          <img class="rounded-circle" src="https://lh5.googleusercontent.com/-b0-k99FZlyE/AAAAAAAAAAI/AAAAAAAAAAA/eu7opA4byxI/photo.jpg?sz=25" alt="Profile">
           Supratik Roy
         </a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
         <a class="nav-link" [routerLink]="['home']">Home</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" [routerLink]="['profile']"><i class="fa fa-user"></i></a>
       </li>
       <li class="nav-item">
         <a class="nav-link"><i class="fa fa-bell"></i></a>
       </li>
       <li class="nav-item">
         <a class="nav-link"><i class="fa fa-comment"></i></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" (click)="onLogout()"><i class="fa fa-power-off"></i></a>
       </li>
     </ul>
   </div>  

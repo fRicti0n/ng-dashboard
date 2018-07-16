@@ -1,4 +1,5 @@
 import { Component, OnInit, HostListener } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -9,7 +10,7 @@ export class NavbarComponent implements OnInit {
 
   open = false;
 
-  constructor() { }
+  constructor(private _router: Router) { }
 
   @HostListener('window:scroll', [])
   checkScroll() {
@@ -25,6 +26,14 @@ export class NavbarComponent implements OnInit {
   }
 
   ngOnInit() {
+  }
+
+  showTooltip(event: any) {
+    console.log(event.target);
+  }
+
+  onLogout() {
+    this._router.navigate(['/login']);
   }
 
 }

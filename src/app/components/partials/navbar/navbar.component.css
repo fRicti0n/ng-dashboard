@@ -19,6 +19,14 @@
     border-radius: 5px;
 }
 
+.active {
+    /* background: rgb(6, 80, 64); */
+    background: rgba(0, 59, 47, 0.9);
+    /* color: rgba(6, 80, 64, 0.9) !important; */
+    /* transition: ease-in 0.5s; */
+    border-radius: 5px;
+}
+
 .bg-dark {
     background: rgb(255, 255, 255, 0.1) !important;
 }
