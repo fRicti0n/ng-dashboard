@@ -12,6 +12,7 @@ import { LayoutComponent } from './components/layout/layout.component';
 import { NavbarComponent } from './components/partials/navbar/navbar.component';
 import { SidebarComponent } from './components/partials/sidebar/sidebar.component';
 import { RegisterComponent } from './components/register/register.component';
+import { NotificationsComponent } from './components/partials/notifications/notifications.component';
 /**
  * Services
  */
@@ -24,7 +25,8 @@ import { AuthService } from './services/auth.service';
     LayoutComponent,
     NavbarComponent,
     SidebarComponent,
-    RegisterComponent
+    RegisterComponent,
+    NotificationsComponent
   ],
   imports: [
     BrowserModule,

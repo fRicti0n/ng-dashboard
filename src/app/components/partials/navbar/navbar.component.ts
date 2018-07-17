@@ -1,4 +1,4 @@
-import { Component, OnInit, HostListener } from '@angular/core';
+import { Component, OnInit, HostListener, Input } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -9,6 +9,11 @@ import { Router } from '@angular/router';
 export class NavbarComponent implements OnInit {
 
   open = false;
+
+  @Input() nCount;
+  @Input() mCount;
+  @Input() notifications;
+  @Input() messages;
 
   constructor(private _router: Router) { }
 

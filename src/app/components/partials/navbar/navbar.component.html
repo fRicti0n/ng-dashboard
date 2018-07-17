@@ -30,14 +30,29 @@
       <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
         <a class="nav-link" [routerLink]="['home']">Home</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link">
+      <li class="nav-item dropdown dropleft">
+        <a class="nav-link" data-toggle="dropdown">
           <i class="fa fa-bell"></i>
+          <span class="badge badge-notify">{{nCount}}</span>
+          <div class="dropdown-menu">
+            <div class="dropdown-item" *ngFor="let notification of notifications">
+              {{notification.name}}
+              <div class="dropdown-divider"></div>
+            </div>
+          </div>
+          <!-- <app-notifications></app-notifications> -->
         </a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link">
+      <li class="nav-item dropdown dropleft">
+        <a class="nav-link" data-toggle="dropdown">
           <i class="fa fa-comment"></i>
+          <span class="badge badge-notify">{{mCount}}</span>
+          <div class="dropdown-menu">
+            <div class="dropdown-item" *ngFor="let notification of notifications">
+              {{notification.name}}
+              <div class="dropdown-divider"></div>
+            </div>
+          </div>
         </a>
       </li>
       <li class="nav-item">

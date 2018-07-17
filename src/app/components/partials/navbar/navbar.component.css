@@ -13,7 +13,8 @@
 
 .nav-item:hover {
     /* background: rgb(6, 80, 64); */
-    background: rgba(0, 59, 47, 0.9);
+    /* background: rgba(0, 59, 47, 0.9); */
+    background: rgba(127, 79, 162, 0.9);
     /* color: rgba(6, 80, 64, 0.9) !important; */
     transition: ease-in 0.5s;
     border-radius: 5px;
@@ -21,7 +22,8 @@
 
 .active {
     /* background: rgb(6, 80, 64); */
-    background: rgba(0, 59, 47, 0.9);
+    /* background: rgba(0, 59, 47, 0.9); */
+    background: rgba(127, 79, 162, 0.9);
     /* color: rgba(6, 80, 64, 0.9) !important; */
     /* transition: ease-in 0.5s; */
     border-radius: 5px;
@@ -60,4 +62,11 @@
 
 .dropdown-item:hover {
     color: #000000;
+}
+
+.badge-notify {
+    position: relative;
+    top: -10px;
+    background: rgb(127, 79, 162);
+    color: #ffffff;
 }

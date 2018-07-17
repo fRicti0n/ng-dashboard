@@ -8,13 +8,18 @@ import { Component, OnInit } from '@angular/core';
 export class MapComponent implements OnInit {
 
   // google maps zoom level
-  zoom: number = 8;
+  zoom = 8;
 
   // initial center position for the map
-  lat: number = 51.673858;
-  lng: number = 7.815982;
+  latitude;
+  longitude;
 
-  constructor() { }
+  constructor() {
+    window.navigator.geolocation.getCurrentPosition(position => {
+      this.latitude = position.coords.latitude;
+      this.longitude = position.coords.longitude;
+    });
+  }
 
   ngOnInit() {
   }

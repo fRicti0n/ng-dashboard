@@ -9,6 +9,7 @@ export class DataService {
 
   private commentsUrl = 'http://jsonplaceholder.typicode.com/comments';
   private todosUrl = 'http://jsonplaceholder.typicode.com/todos';
+  private usersUrl = 'https://jsonplaceholder.typicode.com/users';
 
   constructor(private _http: Http) { }
 
@@ -18,5 +19,9 @@ export class DataService {
 
   getTodos(): Observable<any> {
     return this._http.get(this.todosUrl);
+  }
+
+  getUsers(): Observable<any> {
+    return this._http.get(this.usersUrl);
   }
 }
