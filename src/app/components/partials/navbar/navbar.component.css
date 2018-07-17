@@ -9,6 +9,8 @@
 .nav-item {
     padding-right: 10px;
     padding-left: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
 }
 
 .nav-item:hover {
@@ -68,5 +70,14 @@
     position: relative;
     top: -10px;
     background: rgb(127, 79, 162);
+    color: #ffffff;
+}
+
+.notification {
+    padding: 0;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.dropdown-header {
     color: #ffffff;
 }

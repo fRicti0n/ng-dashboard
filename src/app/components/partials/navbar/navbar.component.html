@@ -23,37 +23,34 @@
     <ul class="navbar-nav ml-auto">
       <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
         <a class="nav-link" [routerLink]="['profile']">
-          <img class="rounded-circle" src="https://lh5.googleusercontent.com/-b0-k99FZlyE/AAAAAAAAAAI/AAAAAAAAAAA/eu7opA4byxI/photo.jpg?sz=25"
-            alt="Profile"> Supratik Roy
+          <img class="rounded-circle" src="assets/images/logo.png" width="30" height="25" alt="Profile">
+          <span>Supratik Roy</span>
         </a>
       </li>
       <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
         <a class="nav-link" [routerLink]="['home']">Home</a>
       </li>
-      <li class="nav-item dropdown dropleft">
-        <a class="nav-link" data-toggle="dropdown">
+      <li class="nav-item dropdown">
+        <a class="nav-link" href="#" id="navbardrop" data-toggle="dropdown">
           <i class="fa fa-bell"></i>
           <span class="badge badge-notify">{{nCount}}</span>
-          <div class="dropdown-menu">
-            <div class="dropdown-item" *ngFor="let notification of notifications">
-              {{notification.name}}
-              <div class="dropdown-divider"></div>
-            </div>
-          </div>
-          <!-- <app-notifications></app-notifications> -->
         </a>
+        <div class="dropdown-menu">
+          <div class="dropdown-header">Notifications</div>
+          <div class="dropdown-divider"></div>
+          <div class="dropdown-item" *ngFor="let notification of notifications">{{notification.name}}</div>
+        </div>
       </li>
-      <li class="nav-item dropdown dropleft">
-        <a class="nav-link" data-toggle="dropdown">
-          <i class="fa fa-comment"></i>
+      <li class="nav-item dropdown">
+        <a class="nav-link" href="#" id="navbardrop" data-toggle="dropdown">
+          <i class="fa fa-bell"></i>
           <span class="badge badge-notify">{{mCount}}</span>
-          <div class="dropdown-menu">
-            <div class="dropdown-item" *ngFor="let notification of notifications">
-              {{notification.name}}
-              <div class="dropdown-divider"></div>
-            </div>
-          </div>
         </a>
+        <div class="dropdown-menu dropdown-menu-left">
+          <div class="dropdown-header">Messages</div>
+          <div class="dropdown-divider"></div>
+          <div class="dropdown-item" *ngFor="let notification of notifications">{{notification.username}}</div>
+        </div>
       </li>
       <li class="nav-item">
         <a class="nav-link" (click)="onLogout()">
